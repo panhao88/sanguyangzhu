@@ -1,0 +1,75 @@
+<!--pages/extension/extension.wxml-->
+<view class="extension">
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      分享推广
+    </view>
+  </view> -->
+  <my-nav title="分享推广">
+    <view>
+      <image src='../../images/image/juxing@2x(1).png' class='back'></image>
+      <view class="kuan">
+        <!-- <view class="you">推广素材</view> -->
+        <view class="yuan">
+          <image src="../../images/image/juxing@2x(5).png" class="fen"></image>
+          <view class="yao" bindtap="record">
+            <view class="zi">{{arr.invitedNumber}}</view>
+            <view class="ren">已邀请人数</view>
+          </view>
+        </view>
+        <view class="kuans">
+          <view>
+            <!-- 微信 -->
+            <button open-type="share">
+              <image src="../../images/image/juxing@2x(4).png" class="weixin"></image>
+              <view class="weixins">微信</view>
+            </button>
+          </view>
+          <view class="dd" bindtap="Moments">
+            <image src="../../images/image/juxing@2x(2).png" class="wei"></image>
+            <view class="xin">朋友圈</view>
+          </view>
+          <view class="dis" bindtap="onClickShows">
+            <image src="../../images/image/juxing@2x(3).png" class="wei"></image>
+            <view class="xin">面对面扫码</view>
+          </view>
+        </view>
+      </view>
+      <view class="team">
+        <view class="tuan">
+          <view class="dui">团队总人数</view>
+          <view class="two">{{arr.teamNum}}</view>
+        </view>
+        <view class="tuaned" bindtap="team">
+          <view class="dui">销售员</view>
+          <view class="two">{{arr.sellPeopleNum}}</view>
+        </view>
+        <view class="tuaneds" bindtap="ment">
+          <view class="dui">销售业绩</view>
+          <view class="two">{{arr.sellRecordNum}}</view>
+        </view>
+      </view>
+      <view class="fuwenben">
+        <view class="arrs">{{arr.about.title}}</view>
+        <!-- <view class="arrto">{{arr.about.content}}</view> -->
+        <view class="arrto">{{arr.about.content}}</view>
+      </view>
+    </view>
+    <!-- 二维码弹框 -->
+    <van-overlay show="{{ shows }}">
+      <view class="wrapper">
+        <view class="blocks">
+          <image src="../../images/image/erweima.png" class="background-image"></image>
+          <view class="canva"><canvas class="canvas-code" canvas-id="myQrcode"
+              style="background:#fff;width: 427rpx;height: 427rpx;" /></view>
+          <view class="xx" bindtap="onClickHides">
+            <image src="../../images/image/xx@2x.png" class="guanbi"></image>
+            <view class="guanbis">关闭</view>
+          </view>
+        </view>
+      </view>
+    </van-overlay>
+  </my-nav>
+</view>

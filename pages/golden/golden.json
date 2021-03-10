@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-overlay": "/lib/vant/overlay",
+    "my-nav":"/components/nav/nav"
+  }
+}

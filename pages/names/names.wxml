@@ -1,0 +1,79 @@
+<!--pages/names/names.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      实名认证
+    </view>
+  </view> -->
+  <my-nav title="实名认证">
+    <form bindsubmit="formSubmit" bindreset="fromReset" report-submit="true">
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- 手机号 -->
+      <view class="bai">
+        <view class="hao">手机号</view>
+        <input type="number" placeholder="请输入手机号" class="ipt" name='phone' value="{{phone}}" bindinput="mobileInput" />
+      </view>
+      <!-- 验证码 -->
+      <view class="bais">
+        <view class="dif">
+          <view class="hao">验证码</view>
+          <input type="number" placeholder="请输入验证码" class="shu" maxlength="6" name='code' value="{{code}}" />
+        </view>
+        <view class="ma" bindtap="send">{{msg}}</view>
+        <!-- <van-button class="ma" slot="button" size="small" type="default" bindtap="send">{{msg}}</van-button> -->
+      </view>
+      <!-- 真实姓名 -->
+      <view class="bai">
+        <view class="hao">真实姓名</view>
+        <input type="text" placeholder="请输入真实姓名" class="qings" name='realName' value="{{realName}}" />
+      </view>
+      <!-- 推广区域 -->
+      <view class="bai">
+        <view class="hao">推广区域</view>
+        <picker mode="multiSelector" bindchange="bindRegionChange" bindcolumnchange="bindRegionColumnChange"
+          range='{{multiArray}}'>
+          <view class="qings" wx:if="{{addressCity}}" name='city' value='{{city}}'>
+            {{addressCity[0]}} > {{addressCity[1]}} > {{addressCity[2]}}
+          </view>
+          <view wx:else class="qings">请选择地区</view>
+        </picker>
+      </view>
+      <!-- 点击推广区域弹出层 -->
+      <!-- 身份证号码 -->
+      <view class="bai">
+        <view class="hao">身份证号码</view>
+        <input type="idcard" placeholder="请输入身份证号码" class="numer" maxlength="18" name='idcode' value="{{idcode}}" />
+      </view>
+      <!-- 身份证人像面 -->
+      <view class="fen">
+        <view class="mian">身份证人像面</view>
+        <view class="upload" bindtap="uploadFace">
+          <block wx:if="{{idCardFace === ''}}">
+            <image src="../../images/image/shenfenzheng1.png" class="fang"></image>
+          </block>
+          <block wx:else>
+            <image class="fang" src="{{idCardFace}}">1111</image>
+          </block>
+        </view>
+      </view>
+      <!-- 身份证国徽面 -->
+      <view class="fen">
+        <view class="mian">身份证国徽面</view>
+        <view class="upload" bindtap="uploadNational">
+          <block wx:if="{{idCardNational === ''}}">
+            <image src="../../images/image/shenfenzheng2.png" class="fang"></image>
+          </block>
+          <block wx:else>
+            <image class="fang" src="{{idCardNational}}">1111</image>
+          </block>
+        </view>
+      </view>
+      <!-- 提交审核 -->
+      <view class="ti">
+        <button form-type="submit" class="btn">提交审核</button>
+      </view>
+    </form>
+  </my-nav>
+</view>

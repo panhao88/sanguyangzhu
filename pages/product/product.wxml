@@ -1,0 +1,25 @@
+<!--pages/product/product.wxml-->
+<view class="product">
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      产品详情
+    </view>
+  </view> -->
+  <my-nav title="产品详情">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- <view class="wide" wx:for="{{app}}" wx:key="index"> -->
+      <view class="wide">
+        <view class="bai">
+          <rich-text class="rich-text" nodes="{{GoodsDetail}}"></rich-text>
+          <!-- <view>
+            <image src="{{item.data.img}}" class="tus"></image>
+          </view> -->
+        </view>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

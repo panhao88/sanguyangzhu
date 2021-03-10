@@ -1,0 +1,40 @@
+<!--pages/ment/ment.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      销售业绩  
+    </view>
+  </view>
+   <image src='../../images/image/changtu.png' class='back'></image> -->
+  <my-nav title="销售业绩">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="changs">
+        <view class="wo">我的业绩</view>
+        <view class="hang">
+          <view class="fd">
+            <view class="shou">销售额 (元)</view>
+            <view class="shuzi">{{sales.salesVolume}}</view>
+          </view>
+          <view class="fd">
+            <view class="felxs">
+              <view class="shou">销售量 (头)</view>
+              <image src="{{sales.msg}}" class="msg" wx:if="{{sales.salesNum !== 0}}"></image>
+              <!-- <image src="{{sales.msg}}" class="msg"></image> -->
+            </view>
+            <view class="shuzi">{{sales.salesNum}}</view>
+          </view>
+          <view class="fdb" bindtap="deal">
+            <view class="bi">
+              <view class="shous">成交笔数(笔)</view>
+              <image src="../../images/image/dayu.png" class="yu"></image>
+            </view>
+            <view class="shuzi">{{sales.cjbs}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+</view>

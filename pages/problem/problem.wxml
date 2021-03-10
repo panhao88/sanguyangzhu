@@ -1,0 +1,27 @@
+<!--pages/problem/problem.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      常见问题
+    </view>
+  </view> -->
+  <my-nav title="常见问题">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- 常见问题 -->
+      <view class="hu" wx:for="{{add}}" wx:key="index">
+        <view class="add">
+          <view class="than" bindtap="than" data-index="{{index}}">
+            <view class="yi">{{index+1}}. {{item.title}}?</view>
+            <image src="../../images/image/xia.png" class="ju" wx:if="{{flag !== index}}"></image>
+            <image src="../../images/image/than.png" class="ju" wx:else></image>
+          </view>
+          <view class="content" wx:if="{{flag === index}}">{{item.content}}</view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

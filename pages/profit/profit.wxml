@@ -1,0 +1,24 @@
+<!--pages/profit/profit.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      累计收益
+    </view>
+  </view> -->
+  <my-nav title="累计收益"></my-nav>
+  <view>
+    <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+    <view class="gao">
+      <view class="qu">渠道</view>
+      <view>日期</view>
+      <view class="price">金额</view>
+    </view>
+    <view class="gao" wx:for="{{app}}" wx:key="index">
+      <view class="song">{{item.type}}</view>
+      <view class="shijian">{{item.createTime}}</view>
+      <view class="prices">+{{item.price}}</view>
+    </view>
+  </view>
+</view>

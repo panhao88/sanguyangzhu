@@ -1,0 +1,46 @@
+<!--pages/addto/addto.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      添加伙伴
+    </view>
+  </view> -->
+  <my-nav title=" 添加伙伴">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+    <view class="kuan">
+      <view class="shu">
+        <view class="ipt">
+          <view class="ban">伙伴ID</view>
+          <view class="ru">请输入伙伴ID</view>
+        </view>
+        <view class="input">
+          <view class="shi">猪粮</view>
+          <view class="song">请输入赠送猪粮数量</view>
+        </view>
+      </view>
+      <view class="shou">
+        <image src="../../images/image/shousuo.png" class="suo"></image>
+        <view class="da">搜索</view>
+      </view>
+    </view>
+    <view class="kuans">
+      <view class="df">
+        <view class="dd">
+          <image src="https://thirdwx.qlogo.cn/mmopen/vi_32/ribFPkxjViaZia32ZT0dcA2FcMk88eBjSvnf9o1oxrFEodMR2Abd3cfY1XjJoqibQy7CiaIiaEKibwqklaCibKYMTeVgpg/132" class="zhu"></image>
+          <view class="shus">
+            <view class="kai">凯特琳娜</view>
+            <view class="te">ID: 1000001</view>
+            <view class="phone">绑定手机号:13000000000</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="ti">
+      <view class="jiao">立即添加</view>
+    </view>
+    </view>
+  </my-nav>
+</view>

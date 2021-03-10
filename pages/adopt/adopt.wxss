@@ -1,0 +1,223 @@
+/* pages/adopt/adopt.wxss */
+page {
+  height: 100%;
+  background: #f1f1f1;
+}
+
+.nav {
+  width: 100%;
+  height: 45rpx;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav-title {
+  width: 100%;
+  height: 45rpx;
+  line-height: 45rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 30rpx;
+  left: 0;
+  z-index: 10;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.back {
+  width: 750rpx;
+  height: 128rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.item-alls {
+  width: 750rpx;
+  height: 80rpx;
+  position: relative;
+}
+.all {
+  width: 750rpx;
+  height: 80rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 0px 0px #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alls {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #6CA543;
+}
+
+.xingzhuan {
+  width: 14rpx;
+  height: 12rpx;
+  margin-left: 15rpx;
+}
+.alled {
+  width: 750rpx;
+  /* height: 185rpx; */
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 80rpx;
+  z-index: 1;
+}
+.flag-all {
+  width: 600rpx;
+  height: 60rpx;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.flag-alls {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  margin-right: 35rpx;
+}
+.flag-felx {
+  width: 24rpx;
+  height: 18rpx;
+  position: absolute;
+  right: 100rpx;
+}
+.flag-item {
+  width: 600rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.reg {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #6CA543;
+}
+.pigs {
+  width: 686rpx;
+  height: 246rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 18rpx 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20rpx;
+  margin-left: 32rpx;
+  margin-top: 26rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.df {
+  display: flex;
+  align-items: center;
+}
+.zhu {
+  width: 192rpx;
+  height: 192rpx;
+  background: #E6E5EB;
+  border-radius: 26rpx;
+  display: flex;
+  align-items: center;
+}
+
+.zhus {
+  width: 192rpx;
+  height: 192rpx;
+  border-radius: 26rpx;
+}
+.shuxiang {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25rpx;
+}
+.yi {
+  display: flex;
+font-size: 28rpx;
+font-family: PingFang SC;
+font-weight: 500;
+color: #898989;
+/* line-height: 50rpx; */
+margin-top: 26rpx;
+}
+.color {
+  color: #6CA543;
+  margin-left: 15rpx;
+}
+.jinzhu {
+font-size: 30rpx;
+font-family: PingFang SC;
+font-weight: 500;
+color: #494949;
+}
+.dispay {
+  display: flex;
+  align-items: center;
+  margin-top: 26rpx;
+}
+.yuan {
+  width: 36rpx;
+  height: 36rpx;
+}
+.xiangqing {
+font-size: 28rpx;
+font-family: PingFang SC;
+font-weight: 500;
+color: #EEB733;
+margin-left: 20rpx;
+/* line-height: 50rpx; */
+}
+.flex {
+  height: 246rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.renyang {
+ width: 150rpx;
+height: 60rpx;
+background: #6CA543;
+border-radius: 20rpx;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.qian {
+  width: 32rpx;
+  height: 32rpx;
+}
+.ren {
+font-size: 28rpx;
+font-family: PingFang SC;
+font-weight: 500;
+color: #FFFFFF;
+line-height: 50rpx;
+margin-left: 10rpx;
+}
+.lu {
+  width: 150rpx;
+height: 60rpx;
+background: #6CA543;
+border-radius: 20rpx;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 50rpx;
+}
+.xuanzhuan {
+  transform: rotate(180deg);
+}

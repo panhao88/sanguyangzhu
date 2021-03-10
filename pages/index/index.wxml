@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="index">
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      首页
+    </view>
+  </view> -->
+  <my-nav title="首页" isReturn="{{false}}">
+    <view>
+      <image src='../../images/image/rectangle.png' class='back'></image>
+      <!-- 轮播图 -->
+      <view>
+        <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}"
+          class="swiper">
+          <swiper-item wx:for="{{swiper}}" wx:key="index">
+            <image src="{{item.img}}" class="ban"></image>
+          </swiper-item>
+        </swiper>
+      </view>
+      <!-- <image src="../../images/image/banner.png" class="ban"></image> -->
+      <view class="backs">
+        <!-- 消息推送 -->
+        <image src="../../images/image/msg@2x.png" class="zhu"></image>
+        <view class="contents">
+          <swiper autoplay="{{autoplay1}}" interval="{{interval1}}" duration="{{duration1}}" circular="{{circular1}}" class="intervals">
+            <swiper-item wx:for="{{stem}}" wx:key="index">
+             <view class="stems">
+              <view class="item-name">{{item.name}},{{item.content}}</view>
+             </view>
+            </swiper-item>
+          </swiper>
+        </view>
+      </view>
+      <!-- 分类 -->
+      <view class="wide">
+        <view wx:for="{{classification}}" wx:key="index" class="yang" bindtap="money" data-index="{{index}}">
+          <image src="{{item.img}}" class="tus"></image>
+          <view class="zi">{{item.classification}}</view>
+        </view>
+      </view>
+      <!-- 资讯 -->
+      <view class="ding">
+        <image mode="widthFix" src="../../images/image/pig(1).png" class="xiao"></image>
+        <view class="gu">三谷资讯</view>
+      </view>
+      <!-- <view> -->
+      <view class="agains" wx:for="{{info}}" wx:key="index" bindtap="dianji" data-item="{{item}}">
+        <image src="{{item.image}}" class="gao"></image>
+        <view class="yipai">
+          <view class="zaici">{{item.title}}</view>
+          <view class="shijian">{{item.createTime}}</view>
+          <!-- </view> -->
+        </view>
+      </view>
+    </view>
+  </my-nav>
+</view>

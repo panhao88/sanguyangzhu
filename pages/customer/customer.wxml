@@ -1,0 +1,28 @@
+<!--pages/customer/customer.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      直推客户
+    </view>
+  </view> -->
+  <my-nav title="直推客户">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="lin" wx:for="{{arr}}" wx:key='index'>
+        <view class="df" bindtap="manager">
+          <image src="{{item.avatar}}" class="da"></image>
+          <view class="pai">
+            <view class="felxs">
+              <view class="kai">{{item.nick_name}}</view>
+              <image src="{{item.img}}" class="msg"></image>
+            </view>
+            <view class="shou">绑定手机号:{{item.phone}}</view>
+            <view class="tui">推广时间:{{item.inTime}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+</view>

@@ -1,0 +1,67 @@
+<!--pages/deal/deal.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      销售记录
+    </view>
+  </view> -->
+  <my-nav title="销售记录">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="boxs">
+        <view class="flexer {{sect === 0 ? 'reg':''}}" bindtap="bonus">
+          <view>销售奖金</view>
+          <image src="../../images/image/webyuan.png" class="webyuan" wx:if="{{flags === 0}}"></image>
+        </view>
+        <view class="flexer {{sect === 1 ? 'reg':''}}" bindtap="judao">
+          <view>渠道奖金</view>
+          <image src="../../images/image/webyuan.png" class="webyuan" wx:if="{{flags === 1}}"></image>
+        </view>
+      </view>
+      <!-- 销售奖金 -->
+      <view wx:if="{{sect === 0}}">
+        <view class="gao" wx:for="{{torder}}" wx:for-item="item" wx:key="index" bindtap="Pig">
+          <view class="df">
+            <image src="../../images/image/chengse (2).png" class="chengse"></image>
+            <view class="shu">
+              <view class="san" wx:for="{{item.tgoods}}" wx:for-item="item1" wx:key="id">
+                {{item1.name}}
+              </view>
+              <view class="price">订单金额:￥{{item.payMoney}}</view>
+              <view class="fu">付款者ID:{{item.userId}}</view>
+              <view class="zhi">支付时间:{{item.payTime}}</view>
+              <view class="dao">预计到账:{{item.ExpectedArrivalTime}}</view>
+            </view>
+          </view>
+          <view class="juyou">
+            <view class="prices">2340.00</view>
+            <view class="ru">待入账</view>
+          </view>
+        </view>
+      </view>
+      <!-- 渠道奖金 -->
+      <view wx:if="{{sect === 1}}">
+        <view class="gao" wx:for="{{torder}}" wx:for-item="item" wx:key="index">
+          <view class="df">
+            <image src="../../images/image/chengse (2).png" class="chengse"></image>
+            <view class="shu">
+              <view class="san" wx:for="{{item.tgoods}}" wx:for-item="item1" wx:key="id">
+                {{item1.name}}
+              </view>
+              <view class="price">订单金额:￥{{item.payMoney}}</view>
+              <view class="fu">付款者ID:{{item.userId}}</view>
+              <view class="zhi">支付时间:{{item.payTime}}</view>
+              <view class="dao">预计到账:{{item.ExpectedArrivalTime}}</view>
+            </view>
+          </view>
+          <view class="juyou">
+            <view class="prices">2340.00</view>
+            <view class="ru">待入账</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+</view>

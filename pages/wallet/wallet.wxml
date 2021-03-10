@@ -1,0 +1,78 @@
+<!--pages/wallet/wallet.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      我的钱包
+    </view>
+  </view> -->
+  <my-nav title="我的钱包">
+    <view>
+      <image src='../../images/image/fang.png' class='back'></image>
+      <view class="gao">
+        <!-- 上面的 -->
+        <view class="df">
+          <view class="shu" bindtap="profit">
+            <view class="pai">
+              <view class="yun">累计收益(元)</view>
+              <image src="../../images/image/baise.png" class="dayu"></image>
+            </view>
+            <view class="monye">{{totalIncom}}</view>
+          </view>
+          <view class="shus" bindtap="balance">
+            <view class="pai">
+              <view class="yun">可用余额(元)</view>
+              <image src="../../images/image/baise.png" class="dayu"></image>
+            </view>
+            <view class="monye">{{balance}}</view>
+          </view>
+          <view class="shued">
+            <view class="yun">猪资产(头)</view>
+            <view class="monye">{{countPig}}</view>
+          </view>
+        </view>
+        <!-- 下面的 -->
+        <view class="defs">
+          <view class="shu" bindtap="raising">
+            <view class="pai">
+              <view class="yun">养猪收益(元)</view>
+              <image src="../../images/image/baise.png" class="dayu"></image>
+            </view>
+            <view class="monye">{{pigIncome}}</view>
+          </view>
+          <view class="shus" bindtap="assets">
+            <view class="pai">
+              <view class="yun">猪粮资产</view>
+              <image src="../../images/image/baise.png" class="dayu"></image>
+            </view>
+            <view class="monye">{{integralAssets}}</view>
+          </view>
+          <view class="shued" bindtap="sale">
+            <view class="pai">
+              <view class="yun">销售奖金</view>
+              <image src="../../images/image/baise.png" class="dayu"></image>
+            </view>
+            <view class="monye">{{saleMoney}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="changs">
+        <view class="wo">我的业绩</view>
+        <view class="hang">
+          <view class="fd">
+            <view class="shou">销售额 (元)</view>
+            <view class="shuzi">43</view>
+          </view>
+          <view class="fdb" bindtap="deal">
+            <view class="bi">
+              <view class="shous">成交笔数(笔)</view>
+              <image src="../../images/image/dayu.png" class="yu"></image>
+            </view>
+            <view class="shuzi">43</view>
+          </view>
+        </view>
+      </view> -->
+    </view>
+  </my-nav>
+</view>

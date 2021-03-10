@@ -1,0 +1,188 @@
+<!--pages/information/information.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      详情信息
+    </view>
+  </view> -->
+  <my-nav title="我的金猪">
+    <view>
+      <image src='../../images/image/juxing@2x(1).png' class='back'></image>
+      <view class="chang">
+        <view class="books" bindtap="policy">
+          <image src="../../images/image/zutu (1).png" class="baodan"></image>
+          <view class="bao">保单信息</view>
+        </view>
+        <view class="booked" bindtap="detail">
+          <image src="../../images/image/zutu (2).png" class="jian"></image>
+          <view class="shi">视频监控</view>
+        </view>
+      </view>
+      <view class="hui">
+        <image src="../../images/image/圆角矩形 3.png" class="yuan"></image>
+        <view class="mu">母猪信息</view>
+      </view>
+      <!-- 母猪信息 -->
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">配种时间</view>
+          <view class="lings">{{parent.matingTime}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">配种方式</view>
+          <view class="lings">{{parent.matingWay}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">管理费剩余</view>
+          <view class="lings">{{parent.surplusManager}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">体长</view>
+          <view class="lings">{{parent.length}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">体重</view>
+          <view class="lings">{{parent.weight}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">胸围</view>
+          <view class="lings">{{parent.bust}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">体高</view>
+          <view class="lings">{{parent.hight}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">猪龄</view>
+          <view class="lings">{{parent.age}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">猪场</view>
+          <view class="lings">{{parent.pigFarm}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">栏位</view>
+          <view class="lings">{{parent.field}}</view>
+        </view>
+      </view>
+      <!-- 产仔信息 -->
+      <view class="zai">
+        <view class="dis">
+          <image src="../../images/image/圆角矩形 3.png" class="yuan"></image>
+          <view class="mu">产崽信息</view>
+        </view>
+        <view class="yipai">
+          <view class="ci">胎次</view>
+          <view class="relative">
+            <view class="tai" bindtap="first">
+              <view class="diyi">第{{parity}}胎</view>
+              <image src="../../images/image/xiafang.png" class="xiafang"></image>
+            </view>
+            <view class="first-flex" wx:if="{{open === true && paritys.length > 0}}">
+              <view class="first {{parity === item.rn?'is-active':''}}" bindtap="bindParity"  wx:for="{{paritys}}" wx:key="index" data-rn="{{item.rn}}">第{{item.rn}}胎</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">生产时间</view>
+          <view class="lings">{{piglets.productTime}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">产崽数量</view>
+          <view class="lings">{{piglets.productNumber}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">产活崽数</view>
+          <view class="lings">{{piglets.live}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">死胎数</view>
+          <view class="lings">{{piglets.dead}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">窝重</view>
+          <view class="lings">{{piglets.litterWeight}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">出生重</view>
+          <view class="lings">{{piglets.firstbornWeight}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">断奶时间</view>
+          <view class="lings">{{piglets.weaningTime}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">公/母数</view>
+          <view class="lings">{{piglets.number}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">断奶活崽数</view>
+          <view class="lings">{{piglets.liveBeforeWeaning}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">断奶重</view>
+          <view class="lings">{{piglets.resurgence}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">断奶前死亡数</view>
+          <view class="lings">{{piglets.deathBeforeWeaning}}</view>
+        </view>
+        <view class="df">
+          <view class="shijian">压死数</view>
+          <view class="lings">{{piglets.deathNumber}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">其它死亡原因</view>
+          <view class="lings">{{piglets.reason}}</view>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="df">
+          <view class="shijian">活崽耳标号</view>
+          <view class="lings">{{piglets.earNumber}}</view>
+        </view>
+      </view>
+      <!-- 消杀防疫 -->
+      <view class="hui">
+        <image src="../../images/image/圆角矩形 3.png" class="yuan"></image>
+        <view class="mu">消杀防疫</view>
+      </view>
+      <view class="kill">
+        <view class="riqi">消毒日期</view>
+        <view class="riqi">消毒药名称</view>
+        <view class="riqi">配置浓度</view>
+        <view class="riqi">实施人</view>
+      </view>
+      <view class="kills" wx:for="{{app}}" wx:key="index">
+        <view class="riqi">{{item.createTime}}</view>
+        <view class="riqi">{{item.name}}</view>
+        <view class="riqi">{{item.potency}}</view>
+        <view class="riqi">{{item.operator}}</view>
+      </view>
+    </view>
+  </my-nav>
+</view>

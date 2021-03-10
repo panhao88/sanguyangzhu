@@ -1,0 +1,76 @@
+<!--pages/price/price.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      产品价格
+    </view>
+  </view> -->
+  <my-nav title="产品价格">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="kuan">
+        <view class="kuangs">
+          <view class="bei">
+            <image src="{{price.tgoods.picture}}" class="zhu"></image>
+          </view>
+          <view class="jinzhu">
+            <view class="san">{{price.tgoods.name}}</view>
+            <view class="disply">
+              <view>周期:</view>
+              <view class="color">{{price.tgoods.period}}个月</view>
+            </view>
+            <view class="dspl">
+              <image src="../../images/image/hongdian.png" class="hong"></image>
+              <view class="ke">购买可赠送10000猪粮</view>
+            </view>
+          </view>
+          <view class="dspls">
+            <view>体重:</view>
+            <view class="yue">约{{price.tgoodsInfo.weight}}kg</view>
+          </view>
+        </view>
+      </view>
+      <view class="jing">
+        <view class="miao">猪苗价格</view>
+        <view class="flen">
+          <view class="price">{{price.tgoodsInfo.price}}元</view>
+          <image src="../../images/image/gougou.png" class="gou"></image>
+        </view>
+      </view>
+      <view class="jings">
+        <view class="miao">综合管理</view>
+        <view class="flen">
+          <view class="price">{{price.tgoodsInfo.managePrice}}元/胎</view>
+          <image src="../../images/image/gougou.png" class="gou"></image>
+        </view>
+      </view>
+      <view class="jings">
+        <view class="miao">保险费用</view>
+        <view class="flen">
+          <view class="price">{{price.tgoodsInfo.insurePrice}}元/胎</view>
+          <image src="../../images/image/gougou.png" class="gou"></image>
+        </view>
+      </view>
+      <view class="jings">
+        <view class="miao">数  量</view>
+        <van-stepper value="{{ numers }}" bind:change="onChange" class="paddings"/>
+      </view>
+      <view class="jinged">
+        <view class="miao">合 计</view>
+        <view class="flen">
+          <view class="prices">￥{{price.tgoodsInfo.price+price.tgoodsInfo.managePrice+price.tgoodsInfo.insurePrice}}元</view>
+        </view>
+      </view>
+      <view class="jing">
+        <view class="miaos">可用10000猪粮抵扣100元</view>
+        <image src="../../images/image/gougou.png" class="gou"></image>
+      </view>
+      <view class="beijing">
+        <view class="zhifu" bindtap="payment">立即支付:{{price.tgoodsInfo.price+price.tgoodsInfo.managePrice+price.tgoodsInfo.insurePrice}}元</view>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

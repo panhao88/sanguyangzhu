@@ -1,0 +1,151 @@
+<!--pages/order/order.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      添加伙伴
+    </view>
+  </view> -->
+  <my-nav title="我的订单">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="kuan">
+        <view class="lu {{oreders === 0 ? 'reg':''}}" bindtap="reg">
+          <view>全部订单</view>
+          <image src="../../images/image/yuans.png" class="yuan" wx:if="{{flag === 0}}"></image>
+        </view>
+        <view class="lu {{oreders === 1 ? 'reg':''}}" bindtap="payment">
+          <view>未支付</view>
+          <image src="../../images/image/yuans.png" class="yuan" wx:if="{{flag === 1}}"></image>
+        </view>
+        <view class="lu {{oreders === 2 ? 'reg':''}}" bindtap="bring">
+          <view>认养订单</view>
+          <image src="../../images/image/yuans.png" class="yuan" wx:if="{{flag === 2}}"></image>
+        </view>
+        <view class="lu {{oreders === 3 ? 'reg':''}}" bindtap="transfers">
+          <view>转让订单</view>
+          <image src="../../images/image/yuans.png" class="yuan" wx:if="{{flag === 3}}"></image>
+        </view>
+      </view>
+      <!-- 第一个 -->
+      <view class="bai" wx:for="{{oreder}}" wx:key="index" bindtap="into" data-state="{{item.state}}"
+        wx:if="{{flag === 0}}" data-tgoodId="{{item.tgoodId}}" data-orderType="{{item.orderType}}">
+        <view class="dengfen">
+          <view class="shijian">{{item.createTime}}</view>
+          <!-- 0-认养，1-助力，2-转让，3-综合管理费 -->
+          <view class="he">
+            {{item.orderType===0?'认养':(item.orderType===1?'助力':(item.orderType===2?'转让':(item.orderType===3?'综合管理费':'')))}}
+          </view>
+        </view>
+        <view class="beijing">
+          <view class="zhou">
+            <view class="bei">
+              <image src="{{item.picture}}" class="jinzhu"></image>
+            </view>
+            <view class="beis">
+              <view class="san">{{item.name}}</view>
+              <view class="shu">
+                <view>周期:</view>
+                <view class="color">{{item.period}}个月</view>
+              </view>
+            </view>
+          </view>
+          <!-- 0未支付 1已支付  2猪苗采购中 3等待选号 4已完成 5已退款 -->
+          <view
+            class="{{item.state===0?'dai':(item.state===1?'dai':(item.state===2?'dai':(item.state===3?'cheng':(item.state===4?'completes':''))))}}">
+            {{item.state===0?'未支付':(item.state===1?'已支付':(item.state===2?'猪苗采购中':(item.state===3?'等待选号':(item.state===4?'已完成':(item.state===5?'已退款':'')))))}}
+          </view>
+        </view>
+      </view>
+      <!-- 未支付 -->
+      <view class="bai" wx:for="{{payment}}" wx:key="index" bindtap="into" data-state="{{item.state}}"
+        wx:if="{{flag === 1}}" data-tgoodId="{{item.tgoodId}}" data-orderType="{{item.orderType}}">
+        <view class="dengfen">
+          <view class="shijian">{{item.createTime}}</view>
+          <!-- 0-认养，1-助力，2-转让，3-综合管理费 -->
+          <view class="he">
+            {{item.orderType===0?'认养':(item.orderType===1?'助力':(item.orderType===2?'转让':(item.orderType===3?'综合管理费':'')))}}
+          </view>
+        </view>
+        <view class="beijing">
+          <view class="zhou">
+            <view class="bei">
+              <image src="{{item.picture}}" class="jinzhu"></image>
+            </view>
+            <view class="beis">
+              <view class="san">{{item.name}}</view>
+              <view class="shu">
+                <view>周期:</view>
+                <view class="color">{{item.period}}个月</view>
+              </view>
+            </view>
+          </view>
+         <!-- 0未支付 1已支付  2猪苗采购中 3等待选号 4已完成 5已退款 -->
+          <view
+          class="{{item.state===0?'dai':(item.state===1?'dai':(item.state===2?'dai':(item.state===3?'cheng':(item.state===4?'completes':''))))}}">
+            {{item.state===0?'未支付':(item.state===1?'已支付':(item.state===2?'猪苗采购中':(item.state===3?'等待选号':(item.state===4?'已完成':(item.state===5?'已退款':'')))))}}</view>
+        </view>
+      </view>
+      <!-- 认养订单 -->
+      <view class="bai" wx:for="{{adopt}}" wx:key="index" bindtap="into" data-state="{{item.state}}"
+        wx:if="{{flag === 2}}" data-orderType="{{item.orderType}}" data-tgoodId="{{item.tgoodId}}">
+        <view class="dengfen">
+          <view class="shijian">{{item.createTime}}</view>
+          <!-- 0-认养，1-助力，2-转让，3-综合管理费 -->
+          <view class="he">
+            {{item.orderType===0?'认养':(item.orderType===1?'助力':(item.orderType===2?'转让':(item.orderType===3?'综合管理费':'')))}}
+          </view>
+        </view>
+        <view class="beijing">
+          <view class="zhou">
+            <view class="bei">
+              <image src="{{item.picture}}" class="jinzhu"></image>
+            </view>
+            <view class="beis">
+              <view class="san">{{item.name}}</view>
+              <view class="shu">
+                <view>周期:</view>
+                <view class="color">{{item.period}}个月</view>
+              </view>
+            </view>
+          </view>
+          <!-- 0未支付 1已支付  2猪苗采购中 3等待选号 4已完成 5已退款 -->
+          <view
+          class="{{item.state===0?'dai':(item.state===1?'dai':(item.state===2?'dai':(item.state===3?'cheng':(item.state===4?'completes':''))))}}">
+            {{item.state===0?'未支付':(item.state===1?'已支付':(item.state===2?'猪苗采购中':(item.state===3?'等待选号':(item.state===4?'已完成':(item.state===5?'已退款':'')))))}}</view>
+        </view>
+      </view>
+      <!-- 转让订单 -->
+      <view class="bai" wx:for="{{transfer}}" wx:key="index" bindtap="into" data-state="{{item.state}}"
+        wx:if="{{flag === 3}}" data-tgoodId="{{item.tgoodId}}" data-orderType="{{item.orderType}}">
+        <view class="dengfen">
+          <view class="shijian">{{item.createTime}}</view>
+          <!-- 0-认养，1-助力，2-转让，3-综合管理费 -->
+          <view class="he">
+            {{item.orderType===0?'认养':(item.orderType===1?'助力':(item.orderType===2?'转让':(item.orderType===3?'综合管理费':'')))}}
+          </view>
+        </view>
+        <view class="beijing">
+          <view class="zhou">
+            <view class="bei">
+              <image src="{{item.picture}}" class="jinzhu"></image>
+            </view>
+            <view class="beis">
+              <view class="san">{{item.name}}</view>
+              <view class="shu">
+                <view>周期:</view>
+                <view class="color">{{item.period}}个月</view>
+              </view>
+            </view>
+          </view>
+         <!-- 0未支付 1已支付  2猪苗采购中 3等待选号 4已完成 5已退款 -->
+          <view
+          class="{{item.state===0?'dai':(item.state===1?'dai':(item.state===2?'dai':(item.state===3?'cheng':(item.state===4?'completes':''))))}}">
+            {{item.state===0?'未支付':(item.state===1?'已支付':(item.state===2?'猪苗采购中':(item.state===3?'等待选号':(item.state===4?'已完成':(item.state===5?'已退款':'')))))}}</view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

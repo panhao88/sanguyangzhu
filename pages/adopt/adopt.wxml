@@ -1,0 +1,59 @@
+<!--pages/adopt/adopt.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      养殖基地
+    </view>
+  </view> -->
+  <my-nav title="认养" isReturn="{{false}}">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- 全部 -->
+      <view class="item-alls">
+        <view class="all" bindtap="alls">
+          <view class="alls">{{alls}}</view>
+          <image src="../../images/image/xingzhuan.png" class="xingzhuan {{flag === true ? 'xuanzhuan':''}}"></image>
+        </view>
+        <!-- 点击全部展开 -->
+        <view class="alled" wx:if="{{flag !== false}}">
+          <view wx:for="{{product}}" wx:key="index" bindtap="clickall" data-item="{{item}}" data-index="{{index}}">
+            <view class="flag-all {{all === index ? 'reg':''}}">
+              <view class="flag-alls">{{item.name}}</view>
+              <image src="../../images/image/hook@2x(1).png" class="flag-felx" wx:if="{{fleg === index}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 第一个 -->
+      <view class="pigs" wx:for="{{app}}" wx:key="index">
+        <view class="df">
+          <view class="zhu">
+            <image src="{{item.picture}}" class="zhus"></image>
+          </view>
+          <view class="shuxiang">
+            <view class="jinzhu">{{item.name}}</view>
+            <view class="yi">
+              <view>周期:</view>
+              <view class="color">{{item.period}}个月</view>
+            </view>
+            <view class="dispay" bindtap="details" data-goodsId="{{item.id}}">
+              <image src="../../images/image/xiaoyuan.png" class="yuan"></image>
+              <view class="xiangqing">详情</view>
+            </view>
+          </view>
+        </view>
+        <view class="flex">
+          <view class="renyang" bindtap="adopt" data-goodsId="{{item.id}}">
+            <image src="../../images/image/biaoqian.png" class="qian"></image>
+            <view class="ren">认养</view>
+          </view>
+          <!-- <view class="lu" bindtap="zhuli">
+        <image src="../../images/image/购物.png" class="qian"></image>
+        <view class="ren">助力</view>
+      </view> -->
+        </view>
+      </view>
+    </view>
+  </my-nav>
+</view>

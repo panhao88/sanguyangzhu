@@ -1,0 +1,22 @@
+<!--pages/base/base.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      养殖基地
+    </view>
+  </view> -->
+  <my-nav title=" 养殖基地">
+    <view>
+      <image src='../../images/image/rectangle.png' class='back' style='height:{{navH}}px'></image>
+      <view class="flex" wx:for="{{records}}" wx:key="index">
+        <view class="flexs">
+          <image src="../../images/image/juxing3.png" class="yuan"></image>
+          <view class="jin">{{item.place}}</view>
+        </view>
+        <image src="{{item.img}}" class="chang"></image>
+      </view>
+    </view>
+  </my-nav>
+</view>

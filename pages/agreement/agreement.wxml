@@ -1,0 +1,19 @@
+<!--pages/agreement/agreement.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      用户协议
+    </view>
+  </view> -->
+  <my-nav title="用户协议">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="kuan">
+        <!-- <view></view> -->
+        <rich-text nodes='{{content}}'>{{title}}</rich-text>
+      </view>
+    </view>
+  </my-nav>
+</view>

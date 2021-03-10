@@ -1,0 +1,32 @@
+<!--pages/farm/farm.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      金堂猪场
+    </view>
+  </view> -->
+  <my-nav title="金堂猪场">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view>
+        <image src="../../images/image/zhuchang.png" class="chang"></image>
+      </view>
+      <view class="changs">
+        <view class="dis">
+          <view class="dang">当前画面</view>
+          <view class="ji">金堂一号机枪</view>
+        </view>
+        <view class="dis">
+          <view class="huan">点击切换</view>
+          <image src="../../images/image/dayu.png" class="yu"></image>
+        </view>
+      </view>
+      <view class="gao">
+
+      </view>
+    </view>
+  </my-nav>
+
+</view>

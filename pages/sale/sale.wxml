@@ -1,0 +1,33 @@
+<!--pages/sale/sale.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      销售奖金
+    </view>
+  </view> -->
+  <my-nav title="销售奖金">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view>
+        <view class="gao">
+          <view class="qu">渠道</view>
+          <view>日期</view>
+          <view class="df">
+            <view class="jine">金额</view>
+            <view class="tai">状态</view>
+          </view>
+        </view>
+        <view class="gao" wx:for="{{app}}" wx:key="index">
+          <view class="xin">{{item.type}}</view>
+          <view class="date">{{item.createTime}}</view>
+          <view class="df">
+            <view class="price">{{item.price}}</view>
+            <view class="yi">{{item.state==0?'待入账':(item.state==1?'已入账':'')}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+</view>

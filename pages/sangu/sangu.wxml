@@ -1,0 +1,20 @@
+<!--pages/sangu/sangu.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      关于三谷
+    </view>
+  </view> -->
+  <my-nav title="关于三谷">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="kuan">
+        <!-- <view>{{content.content}}</view> -->
+        <rich-text nodes="{{content}}"></rich-text>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

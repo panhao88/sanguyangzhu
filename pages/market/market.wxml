@@ -1,0 +1,147 @@
+<!--pages/market/market.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      市场
+    </view>
+  </view> -->
+  <my-nav title="市场">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- <view class="df">
+        <view class="jiage">价格 (元)</view>
+        <view class="hezi">
+          <view class="quan">全部</view>
+          <image src="../../images/image/xia.png" class="xia"></image>
+        </view>
+      </view> -->
+      <!-- 画布图表 -->
+      <!-- <view class="ecaharts">
+        <view class="container">
+          <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ec}}"></ec-canvas>
+        </view>
+      </view>
+      <view class="kuan">
+        <view class="pai">
+          <view class="huang"></view>
+          <view class="mao">毛猪价</view>
+        </view>
+        <view class="pai">
+          <view class="lu"></view>
+          <view class="mao">猪崽价</view>
+        </view>
+        <view class="pai">
+          <view class="cheng"></view>
+          <view class="mao">成交价</view>
+        </view>
+      </view> -->
+      <view class="chang">
+        <view class="shu {{pig === 0 ? 'reg':''}}" bindtap="all">
+          <view>全部</view>
+          <image src="../../images/image/xing.png" class="xing" wx:if="{{flag === 0}}"></image>
+        </view>
+        <view class="shu {{pig === 1 ? 'reg':''}}" bindtap="goldenpig">
+          <view>金猪</view>
+          <image src="../../images/image/xing.png" class="xing" wx:if="{{flag === 1}}"></image>
+        </view>
+        <view class="shu {{pig === 2 ? 'reg':''}}" bindtap="blackpig">
+          <view>黑猪</view>
+          <image src="../../images/image/xing.png" class="xing" wx:if="{{flag === 2}}"></image>
+        </view>
+        <view class="shu {{pig === 3 ? 'reg':''}}" bindtap="whitepig">
+          <view>白猪</view>
+          <image src="../../images/image/xing.png" class="xing" wx:if="{{flag === 3}}"></image>
+        </view>
+      </view>
+      <!-- 全部 -->
+      <view wx:if="{{flag === 0}}">
+        <view class="price" wx:for="{{market}}" wx:key="index">
+          <view class="yipai">
+            <image src="{{item.picture}}" class="zhu">
+            </image>
+            <view class="kai">
+              <view class="te">{{item.nickName}}</view>
+              <view class="pin">品种: {{item.name}}</view>
+              <view class="pin">猪龄: {{item.age}}天</view>
+              <view class="pin">体重: 约{{item.weight}}kg</view>
+            </view>
+          </view>
+          <view class="detail">
+            <view class="shoujia">售价: {{item.price}}元</view>
+            <view class="qing" bindtap="details" data-id="{{item.ppId}}">详情</view>
+            <view class="mai" bindtap="purchase">购买</view>
+          </view>
+        </view>
+      </view>
+      <!-- 金猪 -->
+      <view wx:if="{{flag === 1}}">
+        <view class="price" wx:for="{{goldPig}}" wx:key="index">
+          <view class="yipai">
+            <image src="{{item.picture}}" class="zhu">
+            </image>
+            <view class="kai">
+              <view class="te">{{item.nickName}}</view>
+              <view class="pin">品种: {{item.name}}</view>
+              <view class="pin">猪龄: {{item.age}}天</view>
+              <view class="pin">体重: 约{{item.weight}}kg</view>
+            </view>
+          </view>
+          <view class="detail">
+            <view class="shoujia">售价: {{item.price}}元</view>
+            <view class="qing" bindtap="details" data-id="{{item.ppId}}">详情</view>
+            <view class="mai" bindtap="purchase">购买</view>
+          </view>
+        </view>
+      </view>
+      <!-- 黑猪 -->
+      <view wx:if="{{flag === 2}}">
+        <view class="price" wx:for="{{blackPig}}" wx:key="index">
+          <view class="yipai">
+            <image src="{{item.picture}}" class="zhu">
+            </image>
+            <view class="kai">
+              <view class="te">{{item.nickName}}</view>
+              <view class="pin">品种: {{item.name}}</view>
+              <view class="pin">猪龄: {{item.age}}天</view>
+              <view class="pin">体重: 约{{item.weight}}kg</view>
+            </view>
+          </view>
+          <view class="detail">
+            <view class="shoujia">售价: {{item.price}}元</view>
+            <view class="qing" bindtap="details" data-id="{{item.ppId}}">详情</view>
+            <view class="mai" bindtap="purchase">购买</view>
+          </view>
+        </view>
+      </view>
+      <!-- 白猪 -->
+      <view wx:if="{{flag === 3}}">
+        <view class="price" wx:for="{{whitePig}}" wx:key="index">
+          <view class="yipai">
+            <image src="{{item.picture}}" class="zhu">
+            </image>
+            <view class="kai">
+              <view class="te">{{item.nickName}}</view>
+              <view class="pin">品种: {{item.name}}</view>
+              <view class="pin">猪龄: {{item.age}}天</view>
+              <view class="pin">体重: 约{{item.weight}}kg</view>
+            </view>
+          </view>
+          <view class="detail">
+            <view class="shoujia">售价: {{item.price}}元</view>
+            <view class="qing" bindtap="details" data-id="{{item.ppId}}">详情</view>
+            <view class="mai" bindtap="purchase">购买</view>
+          </view>
+        </view>
+      </view>
+      <!-- 点击购买底部弹框 -->
+      <van-action-sheet show="{{ show }}" round="{{round}}" title="确认付款" bind:close="onClose">
+        <view class="text-al">本次付款金额为</view>
+        <view class="text-algin">￥ 8050.00</view>
+        <view class="text-center">本次交易手续费 50 元</view>
+        <button class="immediately">立即付款</button>
+      </van-action-sheet>
+    </view>
+  </my-nav>
+</view>

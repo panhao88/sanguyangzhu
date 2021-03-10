@@ -1,0 +1,26 @@
+<!--pages/rawals/rawals.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      提现记录
+    </view>
+  </view> -->
+  <my-nav title="提现记录">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view>
+        <view class="kuan">
+          <view class="ri">日期</view>
+          <view class="jin">金额</view>
+        </view>
+        <view class="kuan" wx:for="{{app}}" wx:key='index'>
+          <view class="shijian">{{item.createTime}}</view>
+          <view class="price">{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

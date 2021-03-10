@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-nav":"/components/nav/nav",
+    "van-button": "/lib/vant/button",
+    "van-picker": "/lib/vant/picker"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/adopt/adopt",
+    "pages/my/my",
+    "pages/market/market",
+    "pages/Consultation/Consultation",
+    "pages/base/base",
+    "pages/farm/farm",
+    "pages/product/product",
+    "pages/contract/contract",
+    "pages/price/price",
+    "pages/payment/payment",
+    "pages/wallet/wallet",
+    "pages/profit/profit",
+    "pages/balance/balance",
+    "pages/rawals/rawals",
+    "pages/raising/raising",
+    "pages/assets/assets",
+    "pages/sale/sale",
+    "pages/deal/deal",
+    "pages/golden/golden",
+    "pages/information/information",
+    "pages/policy/policy",
+    "pages/monitor/monitor",
+    "pages/watch/watch",
+    "pages/addto/addto",
+    "pages/order/order",
+    "pages/bepaid/bepaid",
+    "pages/successed/successed",
+    "pages/expense/expense",
+    "pages/purchase/purchase",
+    "pages/wait/wait",
+    "pages/label/label",
+    "pages/help/help",
+    "pages/possession/possession",
+    "pages/transfer/transfer",
+    "pages/details/details",
+    "pages/deta/deta",
+    "pages/names/names",
+    "pages/extension/extension",
+    "pages/customer/customer",
+    "pages/ment/ment",
+    "pages/record/record",
+    "pages/manager/manager",
+    "pages/news/news",
+    "pages/problem/problem",
+    "pages/about/about",
+    "pages/agreement/agreement",
+    "pages/sangu/sangu",
+    "pages/Privacy/Privacy"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "首页",
+    "navigationStyle":"custom",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bbbbbb",
+    "selectedColor": "#6CA543",
+    "list": [{
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home-active.png"
+      },
+      {
+        "text": "认养",
+        "pagePath": "pages/adopt/adopt",
+        "iconPath": "images/tabbar/adopt.png",
+        "selectedIconPath": "images/tabbar/adopt-active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "images/tabbar/my.png",
+        "selectedIconPath": "images/tabbar/my-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

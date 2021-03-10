@@ -1,0 +1,39 @@
+<!--pages/balance/balance.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      可用余额
+    </view>
+  </view> -->
+  <my-nav title="可用余额">
+    <view>
+      <image src='../../images/image/qianbaoda (2).png' class='back'></image>
+      <view class="shuxiang">
+        <image src="../../images/image/qianbaoda (1).png" class="da"></image>
+        <view class="df">
+          <view class="shuzi">0.00</view>
+        </view>
+        <view class="yong">可用余额 (元)</view>
+      </view>
+      <view class="reflect">
+        <view class="reflects" bindtap="rawals">提现记录</view>
+        <image src="../../images/image/youjiao.png" class="youjiao"></image>
+      </view>
+      <view class="gao">
+        <view class="jin">提现金额</view>
+        <view class="qing">
+          <input type="text" placeholder="请输入提现金额" />
+        </view>
+      </view>
+      <view class="liji">
+        <view class="ji">立即提现</view>
+      </view>
+      <view class="pai">
+        <view class="shi">温馨提示</view>
+        <view class="shen">申请成功后，预计1-3个工作日到账</view>
+      </view>
+    </view>
+  </my-nav>
+</view>

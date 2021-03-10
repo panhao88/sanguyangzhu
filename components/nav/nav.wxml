@@ -1,0 +1,15 @@
+<!--components/nav/nav.wxml-->
+<view class="nav {{isBg? 'p-f':''}}" style='height:{{navH}}px'>
+  <view style="padding-left:32rpx;">
+    <image wx:if="{{isReturn}}" src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+  </view>
+  <view class="nav-title">{{title}}</view>
+  <view></view>
+  <view wx:if="{{isBg}}" style='height:{{navH}}px' class='back'>
+    <image src='../../images/image/{{image}}.png' mode="aspectFill" class="back-image"></image>
+  </view>
+</view>
+<view id="box" style="height:{{navHX}}px"></view>
+<view bindtouchmove="touchEnd">
+  <slot></slot>
+</view>

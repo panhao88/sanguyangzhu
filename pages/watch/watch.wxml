@@ -1,0 +1,32 @@
+<!--pages/watch/watch.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      围观伙伴
+    </view>
+  </view> -->
+  <my-nav title="围观伙伴">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- 第一个 -->
+      <view class="kuan" wx:for="{{watch}}" wx:key="index">
+        <view class="df">
+          <view class="dd">
+            <image src="{{item.avatar}}" class="zhu"></image>
+            <view class="shu">
+              <view class="kai">{{item.nickName}}</view>
+              <view class="te">ID: {{item.userId}}</view>
+              <view class="phone">绑定手机号: {{item.phone}}</view>
+            </view>
+          </view>
+          <view class="qu">取消围观</view>
+        </view>
+      </view>
+      <view class="ti" bindtap="add">
+        <view class="jiao">添加围观伙伴</view>
+      </view>
+    </view>
+  </my-nav>
+</view>

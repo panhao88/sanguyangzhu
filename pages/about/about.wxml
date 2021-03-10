@@ -1,0 +1,38 @@
+<!--pages/about/about.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      关于我们
+    </view>
+  </view> -->
+  <my-nav title="关于我们">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- 用户协议 -->
+      <view class="hu" bindtap="agreement">
+        <view class="yi">用户协议</view>
+        <image src="../../images/image/juxing.png" class="ju"></image>
+      </view>
+      <!-- 关于三谷 -->
+      <view class="hu" bindtap="sangu">
+        <view class="yi">关于三谷</view>
+        <image src="../../images/image/juxing.png" class="ju"></image>
+      </view>
+      <!-- 隐私政策 -->
+      <view class="hu" bindtap="privacy">
+        <view class="yi">隐私政策</view>
+        <image src="../../images/image/juxing.png" class="ju"></image>
+      </view>
+      <!-- 联系客服 -->
+      <view class="hu" bindtap="phoneCall">
+        <view class="yi">联系客服</view>
+        <view class="df">
+          <image src="../../images/image/dianhua.png" class="hua"></image>
+          <view class="shuzi">028-85152633</view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+</view>

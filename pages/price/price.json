@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-nav":"/components/nav/nav",
+    "van-stepper": "/lib/vant/stepper"
+  }
+}

@@ -1,0 +1,27 @@
+<!--pages/assets/assets.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      猪粮资产
+    </view>
+  </view> -->
+  <my-nav title="猪粮资产">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view>
+        <view class="gao">
+          <view class="qu">渠道</view>
+          <view>日期</view>
+          <view class="price">金额</view>
+        </view>
+        <view class="gao" wx:for="{{app}}" wx:key="index">
+          <view class="song">{{item.type}}</view>
+          <view class="shijian">{{item.createTime}}</view>
+          <view class="prices">+{{item.integral}}</view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+</view>

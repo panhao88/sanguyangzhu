@@ -1,0 +1,505 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "useApiHostProcess": false,
+    "enableEngineNative": false,
+    "userConfirmedBundleSwitch": false,
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.0.4",
+  "appid": "wx2594b7cec8a181a0",
+  "projectname": "wechat",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/adopt/adopt",
+          "pathName": "pages/adopt/adopt",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/base/base",
+          "pathName": "pages/base/base",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/farm/farm",
+          "pathName": "pages/farm/farm",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/contract/contract",
+          "pathName": "pages/contract/contract",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Consultation/Consultation",
+          "pathName": "pages/Consultation/Consultation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/contract/contract",
+          "pathName": "pages/contract/contract",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/price/price",
+          "pathName": "pages/price/price",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/payment/payment",
+          "pathName": "pages/payment/payment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/about/about",
+          "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/problem/problem",
+          "pathName": "pages/problem/problem",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/problem/problem",
+          "pathName": "pages/problem/problem",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/news/news",
+          "pathName": "pages/news/news",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/label/label",
+          "pathName": "pages/label/label",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/help/help",
+          "pathName": "pages/help/help",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/possession/possession",
+          "pathName": "pages/possession/possession",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/transfer/transfer",
+          "pathName": "pages/transfer/transfer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/golden/golden",
+          "pathName": "pages/golden/golden",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addto/addto",
+          "pathName": "pages/addto/addto",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/bring/bring",
+          "pathName": "pages/bring/bring",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/product/product",
+          "pathName": "pages/product/product",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/information/information",
+          "pathName": "pages/information/information",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/wallet/wallet",
+          "pathName": "pages/wallet/wallet",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/wallet/wallet",
+          "pathName": "pages/wallet/wallet",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/customer/customer",
+          "pathName": "pages/customer/customer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/manager/manager",
+          "pathName": "pages/manager/manager",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/market/market",
+          "pathName": "pages/market/market",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/about/about",
+          "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/record",
+          "pathName": "pages/record/record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/extension/extension",
+          "pathName": "pages/extension/extension",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/price/price",
+          "pathName": "pages/price/price",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/extension/extension",
+          "pathName": "pages/extension/extension",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/customer/customer",
+          "pathName": "pages/customer/customer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ment/ment",
+          "pathName": "pages/ment/ment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ment/ment",
+          "pathName": "pages/ment/ment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/deal/deal",
+          "pathName": "pages/deal/deal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/extension/extension",
+          "pathName": "pages/extension/extension",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/record",
+          "pathName": "pages/record/record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/record",
+          "pathName": "pages/record/record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/record",
+          "pathName": "pages/record/record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/extension/extension",
+          "pathName": "pages/extension/extension",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ment/ment",
+          "pathName": "pages/ment/ment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/extension/extension",
+          "pathName": "pages/extension/extension",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ment/ment",
+          "pathName": "pages/ment/ment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/customer/customer",
+          "pathName": "pages/customer/customer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/customer/customer",
+          "pathName": "pages/customer/customer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/raising/raising",
+          "pathName": "pages/raising/raising",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "猪粮资产",
+          "pathName": "pages/assets/assets",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "销售奖金",
+          "pathName": "pages/sale/sale",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "提现记录",
+          "pathName": "pages/rawals/rawals",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ment/ment",
+          "pathName": "pages/ment/ment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "实名认证",
+          "pathName": "pages/names/names",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "用户协议",
+          "pathName": "pages/agreement/agreement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "关于我们",
+          "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "销售记录",
+          "pathName": "pages/deal/deal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ment/ment",
+          "pathName": "pages/ment/ment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ment/ment",
+          "pathName": "pages/ment/ment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ment/ment",
+          "pathName": "pages/ment/ment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ment/ment",
+          "pathName": "pages/ment/ment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/market/market",
+          "pathName": "pages/market/market",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/market/market",
+          "pathName": "pages/market/market",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/adopt/adopt",
+          "pathName": "pages/adopt/adopt",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/golden/golden",
+          "pathName": "pages/golden/golden",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/information/information",
+          "pathName": "pages/information/information",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/information/information",
+          "pathName": "pages/information/information",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/information/information",
+          "pathName": "pages/information/information",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/information/information",
+          "pathName": "pages/information/information",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/market/market",
+          "pathName": "pages/market/market",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

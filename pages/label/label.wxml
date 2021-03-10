@@ -1,0 +1,135 @@
+<!--pages/label/label.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      订单详情
+    </view>
+  </view> -->
+  <my-nav title="选号详情">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- 第一个 -->
+      <view class="kuan">
+        <image src="../../images/image/yuangou.png" class="gou"></image>
+        <view class="dier">
+          <view class="beijing">
+            <image src="http://sangu-miniapp.oss-cn-hangzhou.aliyuncs.com/test/images/1612423422029.jpg" class="zhu"></image>
+          </view>
+          <view class="shu">
+            <view class="er">耳标号:10101010101010</view>
+            <view class="hao">
+              <view>品种:</view>
+              <view class="hei">黑猪</view>
+            </view>
+            <view class="tian">
+              <view>猪龄:</view>
+              <view class="hei">约60天</view>
+              <view class="diers">
+                <view>体重:</view>
+                <view class="hei">约20kg</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 第二个 -->
+      <view class="kuan">
+        <view class="dier">
+          <view class="beijing">
+            <image src="http://sangu-miniapp.oss-cn-hangzhou.aliyuncs.com/test/images/1612423422029.jpg" class="zhu"></image>
+          </view>
+          <view class="shu">
+            <view class="er">耳标号:10101010101010</view>
+            <view class="hao">
+              <view>品种:</view>
+              <view class="hei">黑猪</view>
+            </view>
+            <view class="tian">
+              <view>猪龄:</view>
+              <view class="hei">约60天</view>
+              <view class="diers">
+                <view>体重:</view>
+                <view class="hei">约20kg</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 第三个 -->
+      <view class="kuan">
+        <view class="dier">
+          <view class="beijing">
+            <image src="http://sangu-miniapp.oss-cn-hangzhou.aliyuncs.com/test/images/1612423422029.jpg" class="zhu"></image>
+          </view>
+          <view class="shu">
+            <view class="er">耳标号:10101010101010</view>
+            <view class="hao">
+              <view>品种:</view>
+              <view class="hei">黑猪</view>
+            </view>
+            <view class="tian">
+              <view>猪龄:</view>
+              <view class="hei">约60天</view>
+              <view class="diers">
+                <view>体重:</view>
+                <view class="hei">约20kg</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 第四个 -->
+      <view class="kuan">
+        <view class="dier">
+          <view class="beijing">
+            <image src="http://sangu-miniapp.oss-cn-hangzhou.aliyuncs.com/test/images/1612423422029.jpg" class="zhu"></image>
+          </view>
+          <view class="shu">
+            <view class="er">耳标号:10101010101010</view>
+            <view class="hao">
+              <view>品种:</view>
+              <view class="hei">黑猪</view>
+            </view>
+            <view class="tian">
+              <view>猪龄:</view>
+              <view class="hei">约60天</view>
+              <view class="diers">
+                <view>体重:</view>
+                <view class="hei">约20kg</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 第五个 -->
+      <view class="kuan">
+        <view class="dier">
+          <view class="beijing">
+            <image src="http://sangu-miniapp.oss-cn-hangzhou.aliyuncs.com/test/images/1612423422029.jpg" class="zhu"></image>
+          </view>
+          <view class="shu">
+            <view class="er">耳标号:10101010101010</view>
+            <view class="hao">
+              <view>品种:</view>
+              <view class="hei">黑猪</view>
+            </view>
+            <view class="tian">
+              <view>猪龄:</view>
+              <view class="hei">约60天</view>
+              <view class="diers">
+                <view>体重:</view>
+                <view class="hei">约20kg</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="ti">
+        <view class="jiao">立即选择耳标号</view>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

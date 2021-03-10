@@ -1,0 +1,59 @@
+<!--pages/possession/possession.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      订单详情
+    </view>
+  </view> -->
+  <my-nav title="订单详情">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="kuan">
+        <view class="beijing">
+          <image src="../../images/image/zhu.png" class="zhu"></image>
+        </view>
+        <view class="shu">
+          <view class="jinzhu">三谷金猪</view>
+          <view class="flex">
+            <view class="flexs">
+              <view class="yipai">
+                <view>猪龄:</view>
+                <view class="yue">约60天</view>
+              </view>
+              <view class="flexed">
+                <view>体重:</view>
+                <view class="yue">约20kg</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="gao">
+        <view class="guan">售 价</view>
+        <view class="tai">10000元</view>
+      </view>
+      <view class="gaos">
+        <view class="guan">剩余时间</view>
+        <view class="tai">35个月</view>
+      </view>
+      <view class="gaos">
+        <view class="guan">原订单号</view>
+        <view class="hao">101010101010101010</view>
+      </view>
+      <view class="gaos">
+        <view class="guan">转让订单号</view>
+        <view class="hao">202020202020202020</view>
+      </view>
+      <view class="heji">
+        <view class="guan">状 态</view>
+        <view class="cai">转让中</view>
+      </view>
+      <view class="ti">
+        <view class="jiao">取消订单</view>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

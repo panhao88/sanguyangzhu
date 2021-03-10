@@ -1,0 +1,35 @@
+<!--pages/details/details.wxml-->
+<!-- 我的合同 -->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      我的合同
+    </view>
+  </view> -->
+  <my-nav title="我的合同">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="my" bindtap="detail">
+        <view class="number">
+          <view class="number-num">合同编号:1010101010101010</view>
+          <view class="shijian">2020-12-25 16:00:22</view>
+        </view>
+        <view class="yipai">
+          <view class="beijing">
+            <image src="http://sangu-miniapp.oss-cn-hangzhou.aliyuncs.com/test/images/1612423422029.jpg" class="bei"></image>
+          </view>
+          <view class="shuxiang">
+            <view class="main">三谷金猪</view>
+            <view class="pai">
+              <view>周期:</view>
+              <view class="color">60个月</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

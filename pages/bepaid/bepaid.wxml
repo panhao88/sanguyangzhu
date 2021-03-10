@@ -1,0 +1,103 @@
+<!--pages/bepaid/bepaid.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      订单详情
+    </view>
+  </view> -->
+  <my-nav title="订单详情">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="kuan">
+        <view class="beijing">
+          <image src="{{obj.picture}}" class="zhu"></image>
+        </view>
+        <view class="shu">
+          <view class="jinzhu">{{obj.name}}</view>
+          <view class="flex">
+            <view class="flexs">
+              <view class="yipai">
+                <view>猪龄:</view>
+                <view class="yue">约{{obj.tgoodsInfo.age}}天</view>
+              </view>
+              <view class="flexed">
+                <view>体重:</view>
+                <view class="yue">约{{obj.tgoodsInfo.weight}}kg</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="gao">
+        <view class="guan">综合管理</view>
+        <view class="df">
+          <view class="tai">2600元/胎</view>
+          <image src="../../images/image/gougou.png" class="gou"></image>
+        </view>
+      </view>
+      <view class="gaos">
+        <view class="guan">缴费胎次</view>
+        <view class="dier">第二胎</view>
+      </view>
+      <view class="heji">
+        <view class="guan">合 计</view>
+        <view class="pirce">￥9600元</view>
+      </view>
+      <view class="gao">
+        <view class="guan">原订单号</view>
+        <view class="hao">101010101010101010</view>
+      </view>
+      <view class="heji">
+        <view class="guan">缴费单号</view>
+        <view class="hao">202020202020202020</view>
+      </view>
+      <view class="ti" bindtap="success">
+        <view class="jiao">立即支付: 2600元</view>
+      </view> -->
+      <view class="gao">
+        <view class="guan">猪苗价格</view>
+        <view class="df">
+          <view class="tai">{{obj.tgoodsInfo.price}}元</view>
+          <image src="../../images/image/gougou.png" class="gou"></image>
+        </view>
+      </view>
+      <view class="gaos">
+        <view class="guan">综合管理</view>
+        <view class="df">
+          <view class="tai">{{obj.tgoodsInfo.managePrice}}元/胎</view>
+          <image src="../../images/image/gougou.png" class="gou"></image>
+        </view>
+      </view>
+      <view class="gaos">
+        <view class="guan">保险费用</view>
+        <view class="df">
+          <view class="tai">{{obj.tgoodsInfo.insurePrice}}元/胎</view>
+          <image src="../../images/image/gougou.png" class="gou"></image>
+        </view>
+      </view>
+      <view class="heji">
+        <view class="guan">合 计</view>
+        <view class="pirce">￥{{obj.tgoodsInfo.price+obj.tgoodsInfo.managePrice+obj.tgoodsInfo.insurePrice}}元</view>
+      </view>
+      <view wx:for="{{obj.torder}}" wx:key="index">
+        <view class="gao">
+          <view class="guan">订单号</view>
+          <view class="hao">{{item.orderSn}}</view>
+        </view>
+        <view class="zhe">
+          <view class="guan">支付时间</view>
+          <view class="hao">{{item.payTime}}</view>
+        </view>
+      </view>
+      <view class="heji">
+        <view class="guan">状态</view>
+        <view class="cai">{{state==0?'未支付':(state==1?'已支付':(state==2?'猪苗采购中':(state==3?'等待选号':(state==4?'已完成':(state==5?'已退款':'')))))}}</view>
+      </view>
+      <view class="ti" bindtap="success">
+        <view class="jiao">立即支付: {{obj.tgoodsInfo.price+obj.tgoodsInfo.managePrice+obj.tgoodsInfo.insurePrice}}元</view>
+      </view>
+    </view>
+  </my-nav>
+</view>

@@ -1,0 +1,245 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "养殖基地",
+          "pathName": "pages/base/base",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "猪场详情",
+          "pathName": "pages/farm/farm",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "签署合同",
+          "pathName": "pages/contract/contract",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "资讯详情",
+          "pathName": "pages/Consultation/Consultation",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "产品价格",
+          "pathName": "pages/price/price",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付成功",
+          "pathName": "pages/payment/payment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "关于我们",
+          "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "常见问题",
+          "pathName": "pages/problem/problem",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "消息中心",
+          "pathName": "pages/news/news",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的订单",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "选号详情",
+          "pathName": "pages/label/label",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的金猪",
+          "pathName": "pages/golden/golden",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "添加围观伙伴",
+          "pathName": "pages/addto/addto",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "产品详情",
+          "pathName": "pages/product/product",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "猪只详情",
+          "pathName": "pages/information/information",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的钱包",
+          "pathName": "pages/wallet/wallet",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "直推客户",
+          "pathName": "pages/customer/customer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "他的业绩",
+          "pathName": "pages/manager/manager",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "挂售市场",
+          "pathName": "pages/market/market",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "邀请记录",
+          "pathName": "pages/record/record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "分享推广",
+          "pathName": "pages/extension/extension",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "产品价格",
+          "pathName": "pages/price/price",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "销售记录",
+          "pathName": "pages/deal/deal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "实名认证",
+          "pathName": "pages/names/names",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/expense/expense",
+          "pathName": "pages/expense/expense",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/market/market",
+          "pathName": "pages/market/market",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "认养",
+          "pathName": "pages/adopt/adopt",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/problem/problem",
+          "pathName": "pages/problem/problem",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ment/ment",
+          "pathName": "pages/ment/ment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/adopt/adopt",
+          "pathName": "pages/adopt/adopt",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/bepaid/bepaid",
+          "pathName": "pages/bepaid/bepaid",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/bepaid/bepaid",
+          "pathName": "pages/bepaid/bepaid",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/adopt/adopt",
+          "pathName": "pages/adopt/adopt",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/information/information",
+          "pathName": "pages/information/information",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/golden/golden",
+          "pathName": "pages/golden/golden",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/golden/golden",
+          "pathName": "pages/golden/golden",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

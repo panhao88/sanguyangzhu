@@ -1,0 +1,202 @@
+/* pages/help/help.wxss */
+page {
+  height: 100%;
+  background: #f1f1f1;
+}
+
+.nav {
+  width: 100%;
+  height: 45rpx;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav-title {
+  width: 100%;
+  height: 45rpx;
+  line-height: 45rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 30rpx;
+  left: 0;
+  z-index: 10;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.return {
+  width: 30rpx;
+  height: 45rpx;
+  position: absolute;
+  left: 32rpx;
+}
+.back {
+  width: 750rpx;
+  height: 128rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.kuan {
+  width: 686rpx;
+  height: 180rpx;
+background: #FFFFFF;
+box-shadow: 0px 1px 0px 0px #F2F2F2;
+border-radius: 20rpx;
+margin-top: 26rpx;
+margin-left: 32rpx;
+display: flex;
+align-items: center;
+}
+.beijing {
+  width: 126rpx;
+height: 126rpx;
+background: #E6E5EB;
+border-radius: 26rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 26rpx;
+}
+.zhu {
+  width: 126rpx;
+height: 126rpx;
+border-radius: 26rpx;
+}
+.shu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+.jinzhu {
+font-size: 30rpx;
+font-family: PingFang SC;
+font-weight: 500;
+color: #494949;
+margin-top: 15rpx;
+}
+.flex {
+  display: flex;
+}
+.flexs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.yipai {
+  display: flex;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #898989;
+  line-height: 50rpx;
+}
+.yue {
+  color: #6CA543;
+}
+.flexed {
+  display: flex;
+font-size: 28rpx;
+font-family: PingFang SC;
+font-weight: 500;
+color: #898989;
+line-height: 50rpx;
+margin-left: 80rpx;
+}
+.gao {
+  width: 686rpx;
+height: 100rpx;
+background: #FFFFFF;
+box-shadow: 0px 1px 0px 0px #F2F2F2;
+border-radius: 20rpx 20rpx 0px 0px;
+margin-top: 26rpx;
+margin-left: 32rpx;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.guan {
+font-size: 28rpx;
+font-family: PingFang SC;
+font-weight: bold;
+color: #898989;
+margin-left: 26rpx;
+}
+.df {
+  display: flex;
+}
+.tai {
+font-size: 28rpx;
+font-family: PingFang SC;
+font-weight: bold;
+color: #333333;
+margin-right: 22rpx;
+}
+.gou {
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 26rpx;
+}
+.gaos {
+  width: 686rpx;
+  height: 100rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 0px 0px #F2F2F2;
+  margin-left: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dier { 
+font-size: 28rpx;
+font-family: PingFang SC;
+font-weight: bold;
+color: #333333;
+margin-right: 26rpx;
+}
+.heji {
+  width: 686rpx;
+height: 100rpx;
+background: #FFFFFF;
+box-shadow: 0px 1px 0px 0px #F2F2F2;
+border-radius: 0px 0px 20rpx 20rpx;
+margin-left: 32rpx;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.pirce {
+font-size: 28rpx;
+font-family: PingFang SC;
+font-weight: bold;
+color: #D72720;
+margin-right: 26rpx;
+}
+.hao {
+font-size: 28rpx;
+font-family: PingFang SC;
+font-weight: bold;
+color: #333333;
+margin-right: 26rpx;
+}
+.zhifu {
+  width: 686rpx;
+height: 100rpx;
+background: #FFFFFF;
+margin-left: 32rpx;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.cai {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #6CA543;
+  margin-right: 26rpx;
+  }

@@ -1,0 +1,219 @@
+<!--pages/my/my.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <my-nav isReturn="{{false}}" title="个人中心" image="beijingtu"> -->
+  <my-nav isReturn="{{false}}" image="beijingtu" title="个人中心">
+    <view>
+      <image src='../../images/image/beijingtu.png' class='back'></image>
+      <!-- 弹框 -->
+      <van-overlay show="{{ show }}">
+        <view class="wrapper">
+          <view class="block">
+            <view class="tishi">修改昵称</view>
+            <input type="text" class="ipt" placeholder="   用户昵称" />
+            <view class="flexs">
+              <view class="cancel" bindtap="onClickHide">取消</view>
+              <view class="release">修改</view>
+            </view>
+          </view>
+        </view>
+      </van-overlay>
+      <!-- 二维码弹框 -->
+      <van-overlay show="{{ shows }}">
+        <view class="wrapper">
+          <view class="blocks">
+            <image src="../../images/image/erweima.png" class="background-image"></image>
+            <view class="canva">
+              <canvas class="canvas-code" canvas-id="myQrcode"/>
+            </view>
+            <view class="xx" bindtap="onClickHides">
+              <image src="../../images/image/xx@2x.png" class="guanbi"></image>
+              <view class="guanbis">关闭</view>
+            </view>
+          </view>
+        </view>
+      </van-overlay>
+      <view wx:if="{{ flag === 0}}" class="flags">
+        <!-- <button class="sign"  open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">立即登录</button> -->
+        <button class="sign" style="display: {{ isShow?'block':'none'}}" open-type="getUserInfo" lang="zh_CN"
+          bindgetuserinfo="bindgetuserinfo">立即登录</button>
+      </view>
+      <!-- 头像 -->
+      <view class="head" wx:else>
+        <view class="flie">
+          <image src="{{avatar}}" class="tu"></image>
+          <view class="json">
+            <view class="names" bindtap="onClickShow">{{nickName}}</view>
+            <view class="tong">
+              <image src="../../images/image/grow@2x.png" class="pig"></image>
+              <view class="huiyuan">普通会员</view>
+            </view>
+            <view class="tong">
+              <image src="../../images/image/vector@2x.png" class="pig"></image>
+              <view class="address">四川/成都/高新区</view>
+            </view>
+          </view>
+        </view>
+        <view class="ids">
+          <view class="codes">ID: {{id}}</view>
+          <image src="../../images/image/qrcode@2x.png" class="code" bindtap="onClickShows"></image>
+        </view>
+      </view>
+      <!-- 钱包 -->
+      <view wx:if="{{flag === 1}}">
+        <view class="bei" bindtap="wallet">
+          <view class="dif">
+            <image src="../../images/image/qianbao.png" class="qian"></image>
+            <view class="bao">我的钱包</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 金猪 -->
+        <view class="beis" bindtap="golden">
+          <view class="dif">
+            <image src="../../images/image/zhurou.png" class="qian"></image>
+            <view class="bao">我的金猪</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 订单 -->
+        <view class="beied" bindtap="order">
+          <view class="dif">
+            <image src="../../images/image/dingdan.png" class="qian"></image>
+            <view class="bao">我的订单</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 合同 -->
+        <view class="beied" bindtap="contract">
+          <view class="dif">
+            <image src="../../images/image/hetong.png" class="qian"></image>
+            <view class="bao">我的合同</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 实名认证 -->
+        <view class="beied" bindtap="name">
+          <view class="dif">
+            <image src="../../images/image/hetong.png" class="qian"></image>
+            <view class="bao">实名认证</view>
+          </view>
+          <view class="flex">
+            <view class="zhong">
+              {{identityState==0?'未认证':(identityState==1?'审核中':(identityState==2?'已拒绝':(identityState==3?'认证成功':'')))}}
+            </view>
+            <image src="../../images/image/juxing.png" class="ju"></image>
+          </view>
+        </view>
+        <!-- 推广中心 -->
+        <view class="beied" bindtap="extension" data-id="id">
+          <view class="dif">
+            <image src="../../images/image/tuiguang.png" class="qian"></image>
+            <view class="bao">推广中心</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 消息中心 -->
+        <view class="beied" bindtap="news">
+          <view class="dif">
+            <image src="../../images/image/xiaoxi.png" class="qian"></image>
+            <view class="bao">消息中心</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 常见问题 -->
+        <view class="beied" bindtap="problem">
+          <view class="dif">
+            <image src="../../images/image/duixiang.png" class="qian"></image>
+            <view class="bao">常见问题</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 关于我们 -->
+        <view class="beied" bindtap="my">
+          <view class="dif">
+            <image src="../../images/image/shiliang.png" class="qian"></image>
+            <view class="bao">关于我们</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+      </view>
+      <!-- if判断 -->
+      <view wx:if="{{flag === 0}}" bindtap="register">
+        <view class="bei">
+          <view class="dif">
+            <image src="../../images/image/qianbao.png" class="qian"></image>
+            <view class="bao">我的钱包</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 金猪 -->
+        <view class="beis">
+          <view class="dif">
+            <image src="../../images/image/zhurou.png" class="qian"></image>
+            <view class="bao">我的金猪</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 订单 -->
+        <view class="beied">
+          <view class="dif">
+            <image src="../../images/image/dingdan.png" class="qian"></image>
+            <view class="bao">我的订单</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 合同 -->
+        <view class="beied">
+          <view class="dif">
+            <image src="../../images/image/hetong.png" class="qian"></image>
+            <view class="bao">我的合同</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 实名认证 -->
+        <view class="beied">
+          <view class="dif">
+            <image src="../../images/image/hetong.png" class="qian"></image>
+            <view class="bao">实名认证</view>
+          </view>
+          <view class="flex">
+            <view class="zhong">未认证</view>
+            <image src="../../images/image/juxing.png" class="ju"></image>
+          </view>
+        </view>
+        <!-- 推广中心 -->
+        <view class="beied" data-id="id">
+          <view class="dif">
+            <image src="../../images/image/tuiguang.png" class="qian"></image>
+            <view class="bao">推广中心</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 消息中心 -->
+        <view class="beied">
+          <view class="dif">
+            <image src="../../images/image/xiaoxi.png" class="qian"></image>
+            <view class="bao">消息中心</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <!-- 常见问题 -->
+        <view class="beied">
+          <view class="dif">
+            <image src="../../images/image/duixiang.png" class="qian"></image>
+            <view class="bao">常见问题</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+        <view class="beied">
+          <view class="dif">
+            <image src="../../images/image/shiliang.png" class="qian"></image>
+            <view class="bao">关于我们</view>
+          </view>
+          <image src="../../images/image/juxing.png" class="ju"></image>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+</view>

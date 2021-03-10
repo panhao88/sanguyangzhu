@@ -1,0 +1,30 @@
+<!--pages/manager/manager.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      您的概况
+    </view>
+  </view> -->
+  <my-nav title="您的概况">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- Ta的业绩 -->
+      <view class="kuan">
+        <view class="ta">Ta的业绩</view>
+        <view class="df">
+          <view class="shu">
+            <view class="yun">他的直推</view>
+            <view class="zi">0</view>
+          </view>
+          <view class="cheng">
+            <view class="yun">销售头数</view>
+            <view class="zi">0</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

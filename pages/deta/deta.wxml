@@ -1,0 +1,20 @@
+<!--pages/deta/deta.wxml-->
+<!-- 合同详情 -->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      合同详情
+    </view>
+  </view> -->
+  <my-nav title="合同详情">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="beijing">
+        昂送货吧是跟康利康利康利康利康利康利康利康利康利康利康利康利康利康利康利康利歌曲去去去亲亲亲亲亲亲亲亲亲亲亲亲亲亲亲亲
+      </view>
+    </view>
+  </my-nav>
+
+</view>

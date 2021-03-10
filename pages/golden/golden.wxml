@@ -1,0 +1,97 @@
+<!--pages/golden/golden.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      我的金猪
+    </view>
+  </view> -->
+  <my-nav title="我的金猪">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- 第一个 -->
+      <!-- <view class="kuan" wx:for="{{pig}}" wx:key="index">
+        <view class="dier">耳标号:{{item.earNumber}}</view>
+        <view class="box">
+          <view class="dif" bindtap="information">
+            <view class="beijing">
+              <image src="{{item.picture}}" class="zhu"></image>
+            </view>
+            <view class="shu">
+              <view class="san">{{item.name}}</view>
+              <view class="yipai">
+                <view>周期:</view>
+                <view class="color">{{item.period}}个月</view>
+              </view>
+            </view>
+          </view>
+          <view class="onclick">
+            <view class="mai" bindtap="onClickShow">我要卖猪</view>
+            <view class="watch" bindtap="watch">邀请围观</view>
+          </view>
+        </view>
+      </view> -->
+      <!-- 点击我要卖猪弹框 -->
+      <van-overlay show="{{ show }}">
+        <view class="wrapper">
+          <view class="block">
+            <view class="tishi">提示</view>
+            <view class="ipt">
+              <view class="pri">价格</view>
+              <input type="text" placeholder="您的理想价格" class="de" />
+            </view>
+            <view class="flexs">
+              <view class="cancel" bindtap="onClickHide">取消</view>
+              <view class="release">发布订单</view>
+            </view>
+          </view>
+        </view>
+      </van-overlay>
+      <!-- 第二个 -->
+      <view class="boxs" wx:for="{{pig}}" wx:key="index">
+        <view class="dier">耳标号:{{item.earNumber}}</view>
+        <view class="map">
+          <view class="dif" data-state="{{item.state}}" data-id="{{item.ppId}}" bindtap="number">
+            <view class="beijing">
+              <image src="{{item.picture}}" class="zhu"></image>
+            </view>
+            <view class="shu">
+              <view class="san">{{item.name}}</view>
+              <view class="yipai">
+                <view>周期:</view>
+                <view class="color">{{item.period}}个月</view>
+              </view>
+            </view>
+          </view>
+          <view wx:if="{{item.state === 4}}">
+            <view class="mai" bindtap="onClickShow">我要卖猪</view>
+            <view class="invitation" bindtap="watch">邀请围观</view>
+          </view>
+          <view wx:else>
+            <view class="mai" data-state="{{item.state}}" data-id="{{item.ppId}}" bindtap="number">
+              {{item.state===0?'未支付':(item.state===1?'已支付':(item.state===2?'猪苗采购中':(item.state===3?'等待选号':(item.state===4?'已完成':(item.state===5?'已退款':'')))))}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="boxs" wx:for="{{pig}}" wx:key="index">
+        <view class="map">
+          <view class="dif">
+            <view class="beijing">
+              <image src="http://sangu-miniapp.oss-cn-hangzhou.aliyuncs.com/test/images/1612423422029.jpg" class="zhu"></image>
+            </view>
+            <view class="shu">
+              <view class="san">{{item.name}}</view>
+              <view class="yipai">
+                <view>周期:</view>
+                <view class="color">{{item.period}}个月</view>
+              </view>
+            </view>
+          </view>
+          <view class="mai">猪苗采购中</view>
+        </view>
+      </view> -->
+    </view>
+  </my-nav>
+</view>

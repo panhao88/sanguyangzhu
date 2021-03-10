@@ -1,0 +1,22 @@
+<!--pages/successed/successed.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      支付成功
+    </view>
+  </view> -->
+  <my-nav title="支付成功">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="beijing">
+        <image src="../../images/image/yuan.png" class="yuan"></image>
+        <view class="zhi">支付成功</view>
+        <view class="cha" bindtap="intoOrder">查看订单</view>
+        <view class="hui" bindtap="intoIndex">返回首页</view>
+      </view>
+    </view>
+  </my-nav>
+
+</view>

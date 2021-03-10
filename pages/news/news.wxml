@@ -1,0 +1,29 @@
+<!--pages/news/news.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      消息中心
+    </view>
+  </view> -->
+  <my-nav title="消息中心">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <!-- 系统消息 -->
+      <view class="hu" wx:for="{{arr}}" wx:key="index">
+        <view>
+          <view class="flex"  bindtap="news" data-index="{{index}}">
+            <view class="xi">{{item.name}}</view>
+            <view class="shijian">{{item.createTime}}</view>
+            <image src="../../images/image/xia.png" class="xia" wx:if="{{currentIndex !== index}}"></image>
+            <image src="../../images/image/than.png" class="xia" wx:if="{{currentIndex === index}}"></image>
+          </view>
+          <view class="{{currentIndex === index ? 'contents':'content'}}">{{item.content}}</view>
+          <!-- <view class="contents" wx:if="{{flag === true}}">{{item.content}}</view> -->
+          <!-- <image src="../../images/image/dayu.png" class="you"></image> -->
+        </view>
+      </view>
+    </view>
+  </my-nav>
+</view>

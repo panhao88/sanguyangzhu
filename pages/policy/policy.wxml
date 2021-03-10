@@ -1,0 +1,22 @@
+<!--pages/policy/policy.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      保单详情
+    </view>
+  </view> -->
+  <my-nav title="保单详情">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="kuan">
+        15555555555555555555555555555
+        111111111111111111111111111111116
+        56333333333333333333333333333333356363415635
+        56363636363636363636363636363636363636363636363636363
+      </view>
+    </view>
+  </my-nav>
+
+</view>

@@ -1,0 +1,22 @@
+<!--pages/monitor/monitor.wxml-->
+<view>
+  <!-- 顶部导航 -->
+  <!-- <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      <image src="../../images/image/fanhui.png" class="return" bindtap="return"></image>
+      监控详情
+    </view>
+  </view> -->
+  <my-nav title="监控详情">
+    <view>
+      <image src='../../images/image/changtu.png' class='back' style='height:{{navH}}px'></image>
+      <view class="mite">
+        <image src="../../images/image/banner.png" class="zhu"></image>
+      </view>
+      <view class="dengfen">
+        <view class="dang">当前状态</view>
+        <view class="san">散养</view>
+      </view>
+    </view>
+  </my-nav>
+</view>
